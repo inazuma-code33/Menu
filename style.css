@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+  background-color: #000000;
+}
+
+.in {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.item {
+  border-top: 1px solid #34db5eaf;
+  overflow: hidden;
+}
+
+.btn {
+  display: block;
+  padding: 16px 20px;
+  background: #0f6185;
+  color: white;
+  position: relative;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #7f45ec96;
+  left: 20px;
+  bottom: -7px;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.btn i {
+  margin-right: 10px;
+}
+
+.smenu {
+  background: #333;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+
+.smenu a {
+  display: block;
+  padding: 16px 26px;
+  color: white;
+  font-size: 14px;
+  margin: 4px 0;
+  position: relative;
+}
+
+.smenu a:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #3498db;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.smenu a:hover:before {
+  opacity: 1;
+}
+
+.item:target .smenu {
+  max-height: 10em;
+}
+
+/* Menu na zew */
